@@ -1,1 +1,6 @@
+To run programm:
+make - generate object files first.
+Run: it will take 5 command line params, to run the test files include in the folder: ./pmms alex.txt jason.txt 3 2 4
 
+here alex.txt and jason.txt are the name of files that contain the entries of matrix A and
+matrix B respectively, and 3(M), 2(N) specify the dimensions of the two matrices, 4(k) the dimensions of the result matrices

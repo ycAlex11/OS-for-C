@@ -1,0 +1,10 @@
+This project is using multiple processes/threads and their inter-process/thread communications respectively with C
+Testing create processes/threads, shared memory and solve the critical section problems. 
+Key points: mutual exclusion(semaphores), consumer and producer. Consumer : parent process, Producer: child process and child-thread
+
+
+The whole projects has two parts mul-processes and mul-threads. Read two martixes from two txt file, and calc matrix multiplication sum by mul-processes/threads.
+To test the programm: please see readMe in each folder 
+
+For process communication uses shared memory, matrix A, B, C and subtotal are created in parent process before any child processes are created
+For inter-thread communication, because threads share memory that means don’t need to explicitly create shared memory for arrays A, B and C, and subtotal. I declared the matrix A, B,C as global variables in parent process, and create the memory. 

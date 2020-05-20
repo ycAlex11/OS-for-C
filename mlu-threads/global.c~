@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int** array;
+void run(int rows,int clums);
+int main(int argc, char* argv[])
+{
+	int rows = atoi(argv[1]);
+	int clums =atoi(argv[2]);
+	int i,j;
+	array =(int**)malloc(rows*sizeof(int*));
+	for(i=0;i<rows;i++)
+	{	
+	array[i]=(int*)malloc(clums*sizeof(int));
+	}
+	for(i=0;i<rows;i++)
+	{
+		for(j=0;j<clums;j++)
+		{array[i][j]=0;
+			
+		}
+	}
+	run(rows,clums);
+	for(i=0;i<rows;i++)
+	{
+		free(array[i]);
+	}
+	free(array);
+}
+void run(int rows,int clums)
+{
+	int i,j;
+	
+	for(i=0;i<rows;i++)
+	{
+		for(j=0;j<clums;j++)
+		{array[i][j]=1;
+			printf("%d,",array[i][j]);
+		}
+		printf("\n");
+	}
+}
